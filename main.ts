@@ -10,6 +10,9 @@ input.onButtonPressed(Button.A, function () {
         // si hay entre 1 y 50 clientes
         // muestre ícono de aforo ideal
         basic.showIcon(IconNames.Yes)
+        // muestre la cantidad actual de clientes
+        basic.showNumber(clientes)
+        basic.showString("c.")
     } else {
         // si hay menos de 1 cliente
         // muestre ícono de que no hay clientela
@@ -57,6 +60,9 @@ input.onButtonPressed(Button.B, function () {
         basic.showIcon(IconNames.Yes)
         // pausa de 1 segundo
         basic.pause(1000)
+        // muestre la cantidad actual de clientes
+        basic.showNumber(clientes)
+        basic.showString("c.")
     } else {
         // muestre ícono de que no hay clientela
         basic.showIcon(IconNames.Sad)
@@ -69,13 +75,10 @@ input.onButtonPressed(Button.B, function () {
     basic.clearScreen()
 })
 let clientes = 0
-// inicialice clientes en 50
-clientes = 50
-// muestre la clientela actual (50)
-basic.showNumber(clientes)
-// completa la oración con la abreviatura de máximo
-basic.showString("max.")
+// inicialice clientes en 0
+// mensaje que diga 50 clientes máximo
+basic.showString("50 c. max.")
 // pausa de 1 segundo
 basic.pause(1000)
-// limpiar pantalla
-basic.clearScreen()
+// muestre la clientela actual (0) si se abre la tienda
+basic.showNumber(clientes)
